@@ -1,0 +1,133 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block nav %}
+<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+    <div class="navbar-nav py-0">
+        <a href="{% url 'main' %}" class="nav-item nav-link">Басты бет</a>
+        <a href="{% url 'about' %}" class="nav-item nav-link active">Біз туралы</a>
+        <a href="{% url 'course' %}" class="nav-item nav-link">Курстар</a>
+        <a href="{% url 'teacher' %}" class="nav-item nav-link">Мұғалімдер</a>
+        <div class="nav-item dropdown">
+        </div>
+        <a href="{% url 'contact' %}" class="nav-item nav-link">Хабарласу</a>
+    </div>
+</div>
+{% endblock nav %}
+
+{% block content %}
+    <!-- Header Start -->
+    <div class="container-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container">
+            <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
+                <h3 class="display-4 text-white text-uppercase">Біз туралы</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="{% url 'main' %}">Басты бет</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Біз туралы</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'main/img/about.jpg' %}" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <div class="text-left mb-4">
+                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Біз туралы</h5>
+                        <h1>Оқытудың инновациялық әдісі</h1>
+                    </div>
+                    <p>E-Course бұл онлайн курстар платформасы, біз білімімізді әлеммен бөлісеміз. 
+                        Жаңа технологияларды үйренгіңіз келсе сіз дұрыс жерге келдіңіз. 
+                        Онлайн оқытудың жаһандық бағыты ретінде біз адамдарды білім арқылы байланыстырамыз және алға жылжытамыз.  
+                        E-Course-те біз бәріміз оқушымыз және нұсқаушымыз. Біз әр түрлі, 
+                        инклюзивті және қызметкерлердің өркендеуіне көмектесетін мәдениетті құру 
+                        үшін құндылықтарымызды күн сайын жүзеге асырамыз.
+                        Бір кездері тауаша болып саналған кеңейтілген онлайн оқыту қазір бүкіл әлем бойынша студенттер үшін әлдеқайда тартымды нұсқаға айналуда. Онлайн білім беру бағдарламалары әсіресе мыналар үшін қолайлы:
+
+                        икемді оқу кестесі кімге қажет;
+                        кім жұмыс пен оқуды ұштастырғысы келеді;
+                        көшпей-ақ халықаралық білім алғысы келетіндер.
+                        Онлайн оқытудың артықшылықтары
+
+                        Желідегі құралдарды пайдалана отырып, ынтымақтастық дағдыларын алыңыз.
+                        Пәндерді жақсы түсіну және оқу үшін мұғалімдермен жеке сөйлесу мүмкіндігі.
+                        Көмек көрсетуге дайын біреудің болуы арқылы техникалық ақаулардан немесе әкімшілік процедуралардан туындаған стресстен құтылу.
+                        Жұмыс пен отбасы кестелерін теңестіру, мансап мүмкіндіктерін табу және курс бойы қолдау көрсету сияқты тақырыптар бойынша басқа студенттермен өзара әрекеттесу және идеялар алмасу.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Registration Start -->
+    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Кез келген курсты ECourse-те тауып ал</h5>
+                        <h1 class="text-white">Қазақ тіліндегі ең сапалы ақпарат</h1>
+                    </div>
+                    <p class="text-white">Дербес компьютерлердің пайда болуымен және желілік технологиялардың дамуымен қашықтықтан оқыту мүмкін болды. Ол күннің уақыты мен орнына қарамастан жаңа пәндерді үйренуге мүмкіндік береді.</p>
+                    <ul class="list-inline text-white m-0">
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Сапалы ақпарат</li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Жылдамдық</li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Білімнің қолжетімділігі</li>
+                    </ul>
+                </div>
+                <div class="col-lg-5">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Registration End -->
+
+
+    <!-- Testimonial Start -->
+    <!-- выводит список -->                                                                                                                                                                                                     
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Айғақ</h5>
+                <h1>Біздің студенттер не дейді</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-normal mb-4">Бірнеше негізгі курстардан өттім. Менің ойымша, олар әр мектепте болуы керек. Нені ұнататынын, немен айналысқысы келетінін түсінбеген адам басқа қалай бағыт таңдауы керек? Сондықтан бір кездері мен Java-ны, содан кейін Python-ды қабылдадым және соңында Javascript-ке орналастым. Мұның бәрі осы платформаның, табандылықтың және оқуға деген ұмтылыстың арқасында.</h4>
+                            <img class="img-fluid mx-auto mb-3" src="{% static 'main/img/testimonial-1.jpg' %}" alt="">
+                            <h5 class="m-0">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-normal mb-4">Жақында мен мұнда бірнеше курстарды бітірдім. Мен бағдарламалауды бастаушы емеспін, мен жай ғана есте сақтау қабілетін жаңартып, дағдыларымды сәттерде жетілдіргім келді. Әрине, мен бұрын белгісіз ештеңе білмедім, бірақ мен таныс ақпаратты жақсы құрылымдадым. Және бұл қазірдің өзінде өте жақсы.</h4>
+                            <img class="img-fluid mx-auto mb-3" src="{% static 'main/img/testimonial-2.jpg' %}" alt="">
+                            <h5 class="m-0">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-normal mb-4">Мен бұл порталға ессізмін, өйткені бұл IT саласында дамуды бастағысы келетін және бағдарламалауды үйренгісі келетіндер үшін ең жақсы деп ойлаймын. Жалғыз теріс, бүкіл сайт және ағылшын тіліндегі оқу бағдарламасы. Сондықтан сіздің шетел тілін білу деңгейіңіз әңгімелесушілік болуы керек. Бірақ сізге тек кодтау керек екенін ескере отырып, мен мұны үлкен мәселе ретінде көрмеймін.</h4>
+                            <img class="img-fluid mx-auto mb-3" src="{% static 'main/img/testimonial-3.jpg' %}" alt="">
+                            <h5 class="m-0">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+    {% endblock content %}

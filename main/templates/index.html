@@ -1,0 +1,270 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block nav %}
+<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+    <div class="navbar-nav py-0">
+        <a href="{% url 'main' %}" class="nav-item nav-link active">Басты бет</a>
+        <a href="{% url 'about' %}" class="nav-item nav-link">Біз туралы</a>
+        <a href="{% url 'course' %}" class="nav-item nav-link">Курстар</a>
+        <a href="{% url 'teacher' %}" class="nav-item nav-link">Мұғалімдер</a>
+        <div class="nav-item dropdown">
+        </div>
+        <a href="{% url 'contact' %}" class="nav-item nav-link">Хабарласу</a>
+    </div>
+</div>
+{% endblock nav %}
+
+{% block content %}
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 mb-5">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#header-carousel" data-slide-to="1"></li>
+                <li data-target="#header-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="{% static 'main/img/carousel-1.jpg' %}" style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-md-3">Ең сапалы онлайн курстар</h5>
+                            <h1 class="display-3 text-white mb-md-4">Үйдең шықпай маман иесі бол</h1>
+                            <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Көбірек білу</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="{% static 'main/img/carousel-2.jpg' %}" style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-md-3">Ең сапалы онлайн курстар</h5>
+                            <h1 class="display-3 text-white mb-md-4">Үздік онлайн оқу платформасы</h1>
+                            <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Көбірек білу</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="{% static 'main/img/carousel-3.jpg' %}" style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-md-3">Ең сапалы онлайн курстар</h5>
+                            <h1 class="display-3 text-white mb-md-4">Үйден үйренудің жаңа әдісі</h1>
+                            <a href="{% url 'course' %}" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Көбірек білу</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'main/img/about.jpg' %}" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <div class="text-left mb-4">
+                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Біз туралы</h5>
+                        <h1>Оқытудың инновациялық әдісі</h1>
+                    </div>
+                    <p>E-Course бұл онлайн курстар платформасы, біз білімімізді әлеммен бөлісеміз. 
+                        Жаңа технологияларды үйренгіңіз келсе сіз дұрыс жерге келдіңіз. 
+                        Онлайн оқытудың жаһандық бағыты ретінде біз адамдарды білім арқылы байланыстырамыз және алға жылжытамыз.  
+                        E-Course-те біз бәріміз оқушымыз және нұсқаушымыз. Біз әр түрлі, 
+                        инклюзивті және қызметкерлердің өркендеуіне көмектесетін мәдениетті құру 
+                        үшін құндылықтарымызды күн сайын жүзеге асырамыз.
+                    </p>
+                    <a href="{% url 'about' %}" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Көбірек білу</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Category Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Тақырыптар</h5>
+                <h1>Үздік тақырыптарды оқып-үйрену</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="{% static 'main/img/cat-1.jpg' %}" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="{% url 'python' %}">
+                            <h4 class="text-white font-weight-medium">Python</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="{% static 'main/img/cat-2.jpg' %}" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="{% url 'csharp' %}">
+                            <h4 class="text-white font-weight-medium">C#</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="{% static 'main/img/cat-3.jpg' %}" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="{% url 'lego' %}">
+                            <h4 class="text-white font-weight-medium">Lego</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Category Start -->
+
+    <!-- Registration Start -->
+    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Кез келген курсты ECourse-те тауып ал</h5>
+                        <h1 class="text-white">Қазақ тіліндегі ең сапалы ақпарат</h1>
+                    </div>
+                    <p class="text-white">Дербес компьютерлердің пайда болуымен және желілік технологиялардың дамуымен қашықтықтан оқыту мүмкін болды. Ол күннің уақыты мен орнына қарамастан жаңа пәндерді үйренуге мүмкіндік береді.</p>
+                    <ul class="list-inline text-white m-0">
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Сапалы ақпарат</li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Жылдамдық</li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Білімнің қолжетімділігі</li>
+                    </ul>
+                </div>
+                <div class="col-lg-5">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Registration End -->
+
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Мұғалімдер</h5>
+                <h1>Біздің мұғалімдермен танысыңыз</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="team-img position-relative">
+                            <img class="img-fluid" src="{% static 'main/img/team-1.jpg' %}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-secondary p-4">
+                            <h5>Jhon Doe</h5>
+                            <p class="m-0">Web Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="team-img position-relative">
+                            <img class="img-fluid" src="{% static 'main/img/team-2.jpg' %}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-secondary p-4">
+                            <h5>Jhon Doe</h5>
+                            <p class="m-0">Web Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="team-img position-relative">
+                            <img class="img-fluid" src="{% static 'main/img/team-3.jpg' %}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-secondary p-4">
+                            <h5>Jhon Doe</h5>
+                            <p class="m-0">Web Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="team-img position-relative">
+                            <img class="img-fluid" src="{% static 'main/img/team-4.jpg' %}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-secondary p-4">
+                            <h5>Jhon Doe</h5>
+                            <p class="m-0">Web Designer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Testimonial Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Айғақ</h5>
+            <h1>Біздің студенттер не дейді</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-normal mb-4">Бірнеше негізгі курстардан өттім. Менің ойымша, олар әр мектепте болуы керек. Нені ұнататынын, немен айналысқысы келетінін түсінбеген адам басқа қалай бағыт таңдауы керек? Сондықтан бір кездері мен Java-ны, содан кейін Python-ды қабылдадым және соңында Javascript-ке орналастым. Мұның бәрі осы платформаның, табандылықтың және оқуға деген ұмтылыстың арқасында.</h4>
+                        <img class="img-fluid mx-auto mb-3" src="{% static 'main/img/testimonial-1.jpg' %}" alt="">
+                        <h5 class="m-0">Client Name</h5>
+                        <span>Profession</span>
+                    </div>
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-normal mb-4">Жақында мен мұнда бірнеше курстарды бітірдім. Мен бағдарламалауды бастаушы емеспін, мен жай ғана есте сақтау қабілетін жаңартып, дағдыларымды сәттерде жетілдіргім келді. Әрине, мен бұрын белгісіз ештеңе білмедім, бірақ мен таныс ақпаратты жақсы құрылымдадым. Және бұл қазірдің өзінде өте жақсы.</h4>
+                        <img class="img-fluid mx-auto mb-3" src="{% static 'main/img/testimonial-2.jpg' %}" alt="">
+                        <h5 class="m-0">Client Name</h5>
+                        <span>Profession</span>
+                    </div>
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-normal mb-4">Мен бұл порталға ессізмін, өйткені бұл IT саласында дамуды бастағысы келетін және бағдарламалауды үйренгісі келетіндер үшін ең жақсы деп ойлаймын. Жалғыз теріс, бүкіл сайт және ағылшын тіліндегі оқу бағдарламасы. Сондықтан сіздің шетел тілін білу деңгейіңіз әңгімелесушілік болуы керек. Бірақ сізге тек кодтау керек екенін ескере отырып, мен мұны үлкен мәселе ретінде көрмеймін.</h4>
+                        <img class="img-fluid mx-auto mb-3" src="{% static 'main/img/testimonial-3.jpg' %}" alt="">
+                        <h5 class="m-0">Client Name</h5>
+                        <span>Profession</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+    {% endblock content %}
+
+ 

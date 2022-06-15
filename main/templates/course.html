@@ -1,0 +1,78 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block nav %}
+<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+    <div class="navbar-nav py-0">
+        <a href="{% url 'main' %}" class="nav-item nav-link">Басты бет</a>
+        <a href="{% url 'about' %}" class="nav-item nav-link">Біз туралы</a>
+        <a href="{% url 'course' %}" class="nav-item nav-link active">Курстар</a>
+        <a href="{% url 'teacher' %}" class="nav-item nav-link">Мұғалімдер</a>
+        <div class="nav-item dropdown">
+        </div>
+        <a href="{% url 'contact' %}" class="nav-item nav-link">Хабарласу</a>
+    </div>
+</div>
+{% endblock nav %}
+
+{% block content %}
+    <!-- Header Start -->
+    <div class="container-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container">
+            <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
+                <h3 class="display-4 text-white text-uppercase">Курстар</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="{% url 'main' %}">Басты бет</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Курстар</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Category Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Тақырыптар</h5>
+                <h1>Үздік тақырыптарды зерттеңіз</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="{% static 'main/img/cat-1.jpg' %}" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="{% url 'python' %}">
+                            <h4 class="text-white font-weight-medium">Python</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="{% static 'main/img/cat-2.jpg' %}" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="{% url 'csharp' %}">
+                            <h4 class="text-white font-weight-medium">C#</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="{% static 'main/img/cat-3.jpg' %}" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="{% url 'lego' %}">
+                            <h4 class="text-white font-weight-medium">Lego</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+    {% endblock content %}
+
+    
