@@ -1,0 +1,38 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block content %}
+<a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="{% url 'register' %}">Тіркелу</a>
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Кіру</h5>
+        </div>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="contact-form bg-secondary rounded p-5">
+            <div id="success">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                <div class="control-group">
+                    <input type="text" class="form-control border-0 p-4" id="username" name="username" placeholder="username" required="required" data-validation-required-message="Please enter your username" />
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="control-group">
+                    <input type="text" class="form-control border-0 p-4" id="password" name="password"  placeholder="password" required="required" data-validation-required-message="Please enter your password" />
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary py-3 px-5" type="submit" id="sendMessageButton">Кіру</button>
+                </div>
+                </form>
+            </div>
+            {% for message in messages %}
+				<p id="messages">{{message}}</p>
+			{% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+</div>
+{% endblock content %}

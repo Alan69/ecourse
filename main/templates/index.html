@@ -8,14 +8,13 @@
         <a href="{% url 'about' %}" class="nav-item nav-link">Біз туралы</a>
         <a href="{% url 'course' %}" class="nav-item nav-link">Курстар</a>
         <a href="{% url 'teacher' %}" class="nav-item nav-link">Мұғалімдер</a>
-        <div class="nav-item dropdown">
-        </div>
         <a href="{% url 'contact' %}" class="nav-item nav-link">Хабарласу</a>
     </div>
 </div>
 {% endblock nav %}
 
 {% block content %}
+
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5 mb-5">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -118,6 +117,15 @@
                         <img class="img-fluid" src="{% static 'main/img/cat-3.jpg' %}" alt="">
                         <a class="cat-overlay text-white text-decoration-none" href="{% url 'lego' %}">
                             <h4 class="text-white font-weight-medium">Lego</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="{% static 'main/img/cat-4.jpg' %}" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="{% url 'teacherCourseShow' %}">
+                            <h4 class="text-white font-weight-medium">Авторлық</h4>
                         </a>
                     </div>
                 </div>
@@ -265,6 +273,6 @@
 </div>
 <!-- Testimonial End -->
 
-    {% endblock content %}
+{% endblock content %}
 
  

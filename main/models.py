@@ -49,6 +49,15 @@ class CategoryLego(models.Model):
     def __str__(self):
         return self.topic
 
+class TeacherCourse(models.Model):
+    topic = models.CharField(max_length=255)
+    about_topic = models.TextField()
+    author = models.CharField(max_length=255)
+    author_info = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.topic
+
 class Post(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
@@ -57,4 +66,3 @@ class Post(models.Model):
 
     def __str__(self):
         return self.name
-

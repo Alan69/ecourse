@@ -1,0 +1,105 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Header Start -->
+    <div class="container-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container">
+            <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
+                <h3 class="display-4 text-white text-uppercase">Single</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Single</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Detail Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="mb-5">
+                        <h4 class="mb-4">{{category.topic}}</h2>
+                        <p>{{category.about_topic}}</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <!-- Author Bio -->
+                    <div class="d-flex flex-column text-center bg-dark rounded mb-5 py-5 px-4">
+                        <img src="{% static 'main/img/user.jpg' %}" class="img-fluid rounded-circle mx-auto mb-3" style="width: 100px;">
+                        <h3 class="text-primary mb-3">{{category.author}}</h3>
+                        <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Курс авторы</h3>
+                        <p class="text-white m-0">{{category.author_info}}</p>
+                    </div>
+
+                    <!-- Category List -->
+                    <div class="mb-5">
+                        <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Categories</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                {% for cat in cat_name %}
+                                    <a href="" class="text-decoration-none h6 m-0">{{ cat.catefory_name }}</a>
+                                {% endfor %}
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Recent Post -->
+
+                    <!-- Tag Cloud -->
+                    <div class="mb-5">
+                        <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Tag Cloud</h3>
+                        <div class="d-flex flex-wrap m-n1">
+                            <a href="" class="btn btn-outline-primary m-1">Design</a>
+                            <a href="" class="btn btn-outline-primary m-1">Development</a>
+                            <a href="" class="btn btn-outline-primary m-1">Marketing</a>
+                            <a href="" class="btn btn-outline-primary m-1">SEO</a>
+                            <a href="" class="btn btn-outline-primary m-1">Writing</a>
+                            <a href="" class="btn btn-outline-primary m-1">Consulting</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 mt-30 mt-lg-0">
+                    <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#header-carousel" data-slide-to="1"></li>
+                            <li data-target="#header-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" style="min-height: 300px;">
+                                <img class="position-relative w-100" src="{% static 'main/img/print_s.jpg' %}" style="min-height: 300px; object-fit: cover;">
+                                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                                    <div class="p-5" style="width: 100%; max-width: 900px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="min-height: 300px;">
+                                <img class="position-relative w-100" src="{% static 'main/img/WordPress-Plugins.jpg' %}" style="min-height: 300px; object-fit: cover;">
+                                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                                    <div class="p-5" style="width: 100%; max-width: 900px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="min-height: 300px;">
+                                <img class="position-relative w-100" src="{% static 'main/img/persuasive-ads-coca-cola-1.jpg' %}" style="min-height: 300px; object-fit: cover;">
+                                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                                    <div class="p-5" style="width: 100%; max-width: 900px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Detail End -->
+    {% endblock content %}
